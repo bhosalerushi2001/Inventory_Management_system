@@ -1,0 +1,44 @@
+﻿@model Inventory_Management_system.Models.Inventory
+
+@{
+    ViewBag.Title = "DetailsInventory";
+}
+
+<h2>Details For inventory by id</h2>
+
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Inventory Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Price")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Quantity")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "UpdateInventory", "Inventory", new { id = Model.Id }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Cancel", "DisplayInventory", "Inventory", new { @class = "btn btn-danger" })
+</p>
+
